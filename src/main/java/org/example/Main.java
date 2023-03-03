@@ -15,7 +15,7 @@ public class Main {
             if (password.contains("password123") || password.contains("0123456789")) {
                 System.out.println("Password to insecure. Enter new password");
                 String passwordinsecure = scanner.nextLine();
-                password =passwordinsecure;
+                password = passwordinsecure;
 
             } else if (PasswordValidation.passwordLengthValidation(password)
                     && PasswordValidation.passwordContainsNumbers(password)) {
