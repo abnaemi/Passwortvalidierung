@@ -20,7 +20,8 @@ public class Main {
             } else if (PasswordValidation.passwordLengthValidation(password)
                     && PasswordValidation.passwordContainsNumbers(password)) {
                 System.out.println("Password accepted!");
-            } else if (!PasswordValidation.passwordLengthValidation(password) || !PasswordValidation.passwordContainsNumbers(password)) {
+            } else if (!PasswordValidation.passwordLengthValidation(password) ||
+                    !PasswordValidation.passwordContainsNumbers(password)) {
                 System.out.println("Password too short or doesnt contain numbers. Enter a new password");
                 String password2 = scanner.nextLine();
                 password = password2;
@@ -29,29 +30,9 @@ public class Main {
             System.out.println("Password accepted");
 
         } while (!PasswordValidation.passwordLengthValidation(password)
-                || !PasswordValidation.passwordContainsNumbers(password) || password.contains("password123") || password.contains("0123456789"));
+                || !PasswordValidation.passwordContainsNumbers(password) || password.contains("password123")
+                || password.contains("0123456789"));
 
 
     }
 }
-
-
-//    Scanner input = new Scanner (System.in);
-//        System.out.println("Gib dein Passwort ein");
-//
-//                String passwort = input.nextLine();
-//
-//                System.out.println(passwort.length() );
-//
-
-
-//                if (passwort.matches(".*\\d.*"))
-//                {System.out.println("contains a number");}
-//                else {
-//                System.out.println("no number");
-//                }
-//
-//                if (passwort.contains("123456" || "passwort")) {
-//                return "weak passwort"
-//                }  else
-//                return "good passwort"
