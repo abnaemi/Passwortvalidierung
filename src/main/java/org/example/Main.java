@@ -34,5 +34,13 @@ public class Main {
                 || password.contains("0123456789"));
 
 
+        // siehe methode
+        boolean containsLowerAndUpperC = PasswordValidation.checkString(password);
+        if (containsLowerAndUpperC == true){
+            System.out.println("Password includes lower and uppercases");
+        } else {
+            System.out.println("Password does not include lower and uppercases");
+        }
+
     }
 }

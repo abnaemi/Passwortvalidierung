@@ -77,7 +77,33 @@ class PasswordValidationTest {
 
 
     }
+    @Test
+    void LowerAndUpperCasesTrue() {
+        // GIVEN
+        String password = "Testing23423";
+
+        //WHEN
+        boolean actual = PasswordValidation.checkString(password);
+
+        // THEN
+        assertEquals(true, actual);
 
 
+    }
+
+
+    @Test
+    void LowerAndUpperCasesFalse() {
+        // GIVEN
+        String password = "testing23423";
+
+        //WHEN
+        boolean actual = PasswordValidation.checkString(password);
+
+        // THEN
+        assertEquals(false, actual);
+
+
+    }
 
 }
