@@ -1,28 +1,23 @@
 package org.example;
 
 public class PasswordValidation {
-
-
     public static boolean passwordLengthValidation(String password) {
-
         return password.length() >= 8;
     }
 
-
     public static boolean passwordContainsNumbers(String password) {
-
         return password.matches(".*\\d.*");
     }
 
+    public static boolean checkLowerUpperCase(String password) {
+        return password.matches("^(?=.*[a-z])(?=.*[A-Z]).+$");
+    }
 
 
-    /*
-    *
-    *
-    * checkstring methode von stackoveflow
-    * erklärung = System.out.println(checkString("aBCd1")); // output is true
-    *   System.out.println(checkString("abcd")); //output is false
-    * */
+    /* checkstring methode von stackoveflow
+     * erklärung = System.out.println(checkString("aBCd1")); // output is true
+     *   System.out.println(checkString("abcd")); //output is false
+     * */
 //    public static boolean checkString(String str) {
 //        char ch;
 //        boolean capitalFlag = false;
@@ -44,7 +39,5 @@ public class PasswordValidation {
 //        return false;
 //    }
 
-    public static boolean checkLowerUpperCase (String password){
-        return password.matches("^(?=.*[a-z])(?=.*[A-Z]).+$");
-    }
+
 }
