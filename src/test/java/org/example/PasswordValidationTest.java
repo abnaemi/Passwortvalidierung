@@ -80,10 +80,10 @@ class PasswordValidationTest {
     @Test
     void LowerAndUpperCasesTrue() {
         // GIVEN
-        String password = "Testing23423";
+        String password = "Testing";
 
         //WHEN
-        boolean actual = PasswordValidation.checkString(password);
+        boolean actual = PasswordValidation.checkLowerUpperCase(password);
 
         // THEN
         assertEquals(true, actual);
@@ -93,17 +93,32 @@ class PasswordValidationTest {
 
 
     @Test
-    void LowerAndUpperCasesFalse() {
+    void LowerAndUpperCasesFalseOnlyLower() {
         // GIVEN
-        String password = "testing23423";
+        String password = "testing";
 
         //WHEN
-        boolean actual = PasswordValidation.checkString(password);
+        boolean actual = PasswordValidation.checkLowerUpperCase(password);
 
         // THEN
         assertEquals(false, actual);
 
 
     }
+
+    @Test
+    void LowerAndUpperCasesFalseOnlyBigger() {
+        // GIVEN
+        String password = "TEEEEE";
+
+        //WHEN
+        boolean actual = PasswordValidation.checkLowerUpperCase(password);
+
+        // THEN
+        assertEquals(false, actual);
+
+
+    }
+
 
 }
