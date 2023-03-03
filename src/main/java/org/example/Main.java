@@ -5,12 +5,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-
-
-
-
     }
 }
+
+
+//    Scanner scanner = new Scanner (System.in);
+//
+//        System.out.println("Gib dein Passwort ein");
+//                String passwort = scanner.nextLine();
+//                System.out.println("Dein Passwort ist " + passwort);
+
 
 
 //    Scanner input = new Scanner (System.in);
@@ -20,6 +24,8 @@ public class Main {
 //
 //                System.out.println(passwort.length() );
 //
+
+
 //                if (passwort.matches(".*\\d.*"))
 //                {System.out.println("contains a number");}
 //                else {
