@@ -1,22 +1,30 @@
 package org.example;
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Gib dein Passwort ein");
-        String passwort = scanner.nextLine();
-        System.out.println("Dein Passwort ist " + passwort);
+        System.out.println("Please enter your password");
+        String password = scanner.nextLine();
+        //System.out.println("Your password is " + password);
+        if (PasswordValidation.passwordLengthValidation(password)
+                && PasswordValidation.passwordContainsNumbers(password)) {
+            System.out.println("Password accepted!");
+        } else if (!PasswordValidation.passwordLengthValidation(password)) {
+            System.out.println("Password too short. Enter new password" );
+        } else if (!PasswordValidation.passwordContainsNumbers(password)) {
+            System.out.println("Password doesn't contain numbers. Enter new password");
+        }
+
+
+        //System.out.println(PasswordValidation.passwordLengthValidation(password));
+        //System.out.println(PasswordValidation.passwordContainsNumbers(password));
 
     }
 }
-
-
-
-
 
 
 //    Scanner input = new Scanner (System.in);
