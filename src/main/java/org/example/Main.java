@@ -10,18 +10,29 @@ public class Main {
         System.out.println("Please enter your password");
         String password = scanner.nextLine();
         //System.out.println("Your password is " + password);
-        if (PasswordValidation.passwordLengthValidation(password)
-                && PasswordValidation.passwordContainsNumbers(password)) {
-            System.out.println("Password accepted!");
-        } else if (!PasswordValidation.passwordLengthValidation(password)) {
-            System.out.println("Password too short. Enter new password" );
-        } else if (!PasswordValidation.passwordContainsNumbers(password)) {
-            System.out.println("Password doesn't contain numbers. Enter new password");
-        }
 
+        do {
+            if (password.contains("password123") || password.contains("0123456789")) {
+                System.out.println("Password to insecure. Enter new password");
+                String passwordinsecure = scanner.nextLine();
+                password =passwordinsecure;
 
-        //System.out.println(PasswordValidation.passwordLengthValidation(password));
-        //System.out.println(PasswordValidation.passwordContainsNumbers(password));
+            } else if (PasswordValidation.passwordLengthValidation(password)
+                    && PasswordValidation.passwordContainsNumbers(password)) {
+                System.out.println("Password accepted!");
+            } else if (!PasswordValidation.passwordLengthValidation(password) || !PasswordValidation.passwordContainsNumbers(password)) {
+                System.out.println("Password too short or doesnt contain numbers. Enter a new password");
+                String password2 = scanner.nextLine();
+                password = password2;
+
+            }
+
+            //System.out.println(PasswordValidation.passwordLengthValidation(password));
+            //System.out.println(PasswordValidation.passwordContainsNumbers(password));
+
+        } while (!PasswordValidation.passwordLengthValidation(password)
+                || !PasswordValidation.passwordContainsNumbers(password) || password.contains("password123") || password.contains("0123456789"));
+
 
     }
 }
