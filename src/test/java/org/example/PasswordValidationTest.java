@@ -7,20 +7,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class PasswordValidationTest {
     @Test
     void isPasswordLongEnoughTrue() {
-
-
         // GIVEN
-
         String password = "firstproject";
 
         //WHEN
-
         boolean actual = PasswordValidation.passwordLengthValidation(password);
 
         // THEN
         assertEquals(true, actual);
-
-
     }
 
     @Test
@@ -33,8 +27,6 @@ class PasswordValidationTest {
 
         // THEN
         assertEquals(false, actual);
-
-
     }
     @Test
     void isPasswordEqual() {
@@ -46,8 +38,6 @@ class PasswordValidationTest {
 
         // THEN
         assertEquals(true, actual);
-
-
     }
 
     @Test
@@ -87,10 +77,7 @@ class PasswordValidationTest {
 
         // THEN
         assertEquals(true, actual);
-
-
     }
-
 
     @Test
     void LowerAndUpperCasesFalseOnlyLower() {
@@ -102,8 +89,6 @@ class PasswordValidationTest {
 
         // THEN
         assertEquals(false, actual);
-
-
     }
 
     @Test
@@ -116,9 +101,6 @@ class PasswordValidationTest {
 
         // THEN
         assertEquals(false, actual);
-
-
     }
-
 
 }

@@ -15,16 +15,17 @@ public class Main {
                 String passwordinsecure = scanner.nextLine();
                 password = passwordinsecure;
 
-            } else if (!PasswordValidation.passwordLengthValidation(password) ||
-                    !PasswordValidation.passwordContainsNumbers(password)) {
-                System.out.println("Password too short or doesnt contain numbers. Enter a new password");
+            } else if (!PasswordValidation.passwordLengthValidation(password)
+                    || !PasswordValidation.passwordContainsNumbers(password)
+                    || !PasswordValidation.checkLowerUpperCase(password)) {
+                System.out.println("Password must contain upper and lower case letters, a number and at least 9 characters. Enter a new password");
                 String password2 = scanner.nextLine();
                 password = password2;
             }
 
         } while (!PasswordValidation.passwordLengthValidation(password)
                 || !PasswordValidation.passwordContainsNumbers(password) || password.contains("password123")
-                || password.contains("0123456789"));
+                || password.contains("0123456789") || !PasswordValidation.checkLowerUpperCase(password));
         System.out.println("Password accepted");
     }
 }
