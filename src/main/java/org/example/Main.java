@@ -26,9 +26,7 @@ public class Main {
                 password = password2;
 
             }
-
-            //System.out.println(PasswordValidation.passwordLengthValidation(password));
-            //System.out.println(PasswordValidation.passwordContainsNumbers(password));
+            System.out.println("Password accepted");
 
         } while (!PasswordValidation.passwordLengthValidation(password)
                 || !PasswordValidation.passwordContainsNumbers(password) || password.contains("password123") || password.contains("0123456789"));
